@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Страница загрузилась
+{% if station_list %}
+Station list is True
+<ul>
+{% for station in station_list %}
+<li><a href="/stations/{{ station.id }}/">{{ station.freq }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No stations are available.</p>
+{% endif %}
+</body>
+</html>
